@@ -1,24 +1,23 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './styles/Login.css';
+import './Login.css';
 
 function Login() {
   const navigate = useNavigate();
 
   const handleUserLogin = () => {
-    navigate('/user-dashboard');
+    navigate('');
   };
 
   const handleAdminLogin = () => {
-    navigate('/admin-dashboard');
+    navigate('/admin-login');
   };
 
   return (
     <div className="login-container">
       <h2>Login</h2>
-      <button onClick={handleUserLogin}>Logar como Admin</button>
-      <button onClick={handleAdminLogin}>Logar como Usuário</button>
-      
+      <button onClick={handleUserLogin}>Acessar como usuário</button>
+      <button onClick={handleAdminLogin}>Acessar como admin</button>
     </div>
   );
 }
